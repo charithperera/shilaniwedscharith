@@ -1,0 +1,19 @@
+html, body {
+  background: url("../img/main.jpg") no-repeat center 10% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#logo img {
+  padding-top: 200px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+#intro p {
+  color: white;
+  font-family: 'Yellowtail', cursive;
+  font-size: 18px;
+}
