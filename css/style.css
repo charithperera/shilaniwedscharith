@@ -7,13 +7,86 @@ html, body {
 }
 
 #logo img {
-  padding-top: 200px;
+  padding-top: 250px;
+  padding-bottom: 10%;
   width: 200px;
   box-sizing: border-box;
 }
 
-#intro p {
+#intro, #counter, #tuned p {
   color: white;
   font-family: 'Yellowtail', cursive;
   font-size: 18px;
+}
+
+#counter p {
+  font-size: 32px;
+}
+
+#tuned {
+  padding-top: 100px;
+}
+
+/*@media (max-width: 992px) {
+  #logo img {
+    padding-top: 250px;
+  }
+}
+
+@media(max-width:700px){
+  html, body {
+    background: url("../img/main.jpg") no-repeat -400px center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #tuned {
+    padding-top: 50px;
+  }
+}
+
+@media(max-width:500px) {
+  html, body {
+    background: url("../img/main.jpg") no-repeat -170px center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media(max-width:400px){
+  html, body {
+    background: url("../img/main.jpg") no-repeat -370px center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #tuned {
+    padding-top: 50px;
+  }
+}*/
+
+@media (max-width: 600px) {
+  html, body {
+    background: url("../img/main.jpg") no-repeat -370px center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 400px) {
+  html, body {
+    background: url("../img/main.jpg") no-repeat -400px center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
