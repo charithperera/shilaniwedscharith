@@ -15,8 +15,13 @@ html, body {
 
 #intro, #counter, #tuned p {
   color: white;
-  font-family: 'Yellowtail', cursive;
   font-size: 18px;
+  font-family: 'Cinzel', serif;
+}
+
+#intro p:first-of-type {
+  font-family: 'Parisienne', cursive;
+  font-size: 28px;
 }
 
 #counter p {
