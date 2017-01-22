@@ -1,11 +1,9 @@
 html, body {
-  background-image: url("../img/main.jpg");
-  height:100%;
-  width:100%;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position: center 10px;
-  background-attachment:fixed;
+  background: url("../img/main.jpg") no-repeat center 10% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #logo img {
@@ -34,7 +32,15 @@ html, body {
   padding-top: 100px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+  html, body {
+    background: url("../img/mainmobile.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
   #logo img {
     padding-top: 200px;
   }
