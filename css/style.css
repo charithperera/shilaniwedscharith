@@ -1,9 +1,11 @@
 html, body {
-  background: url("../img/main.jpg") no-repeat center 10% fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url("../img/main.jpg");
+  height:100%;
+  width:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center 10px;
+  background-attachment:fixed;
 }
 
 #logo img {
