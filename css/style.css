@@ -31,3 +31,13 @@ html, body {
 #tuned {
   padding-top: 100px;
 }
+
+@media (max-width: 400px) {
+  #logo img {
+    padding-top: 200px;
+  }
+
+  #tuned {
+    padding-top: 50px;
+  }
+}
