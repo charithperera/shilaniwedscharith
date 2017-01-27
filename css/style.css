@@ -1,51 +1,23 @@
-html, body {
-  background: url("../img/main.jpg") no-repeat center 10% fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
+.navbar {
+  background-color: #051429;
+  border-bottom: 1px solid white;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: bold;
 }
 
-#logo img {
-  padding-top: 250px;
-  padding-bottom: 10%;
-  width: 200px;
-  box-sizing: border-box;
+.navbar a {
+  color: #CCC !important;
 }
 
-#intro, #counter, #tuned p {
-  color: white;
-  font-size: 18px;
-  font-family: 'Cinzel', serif;
+.navbar a:hover {
+  color: #AD9743 !important;
 }
 
-#intro p:first-of-type {
-  font-family: 'Parisienne', cursive;
-  font-size: 28px;
+.navbar-header .navbar-brand {
+  padding: 0;
 }
 
-#counter p {
-  font-size: 32px;
-}
-
-#tuned {
-  padding-top: 100px;
-}
-
-@media (max-width: 500px) {
-  html, body {
-    background: url("../img/mainmobile.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  #logo img {
-    padding-top: 200px;
-  }
-
-  #tuned {
-    padding-top: 50px;
-  }
+.navbar-header .navbar-brand img {
+  width: 100px;
 }
