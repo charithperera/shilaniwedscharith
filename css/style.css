@@ -21,3 +21,20 @@
 .navbar-header .navbar-brand img {
   width: 100px;
 }
+
+.header {
+  padding: 300px 0 300px 0;
+  background: url('../img/main.jpg') no-repeat center 50px;
+  background-size: cover;
+  width: 100%;
+  border-bottom: 2px solid #FFF;
+  color: #FFF;
+}
+
+.header img {
+  width: 200px;
+}
+
+.header p {
+
+}
