@@ -23,7 +23,7 @@
   					<span class="icon-bar"></span>
   					<span class="icon-bar"></span>
   				</button>
-  				<a class="navbar-brand" href="#"><img src="img/sc.png" alt=""></a>
+  				<a class="navbar-brand" href="#"><img src="img/sc.png" class="img-responsive"></a>
   			</div>
   			<div class="navbar-collapse collapse">
   				<ul class="nav navbar-nav navbar-right">
@@ -41,7 +41,7 @@
     <section class="header">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-md-offset-10 col-xs-12 text-center">
+          <div class="col-xl-4 col-xl-offset-10 col-xs-12 text-center">
             <img src="img/sc.png">
             <p class="location">Victoria Park | Brisbane</p>
             <p class="date">9th of September 2017</p>
@@ -68,42 +68,76 @@
               <em>Proin ultrices libero sit amet tortor varius consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam sagittis commodo arcu id facilisis. Donec id rutrum magna. Proin fringilla diam vulputate mi consectetur, ac convallis purus consectetur. Nullam non faucibus dolor. Phasellus ullamcorper nisi nec massa dapibus porta. Quisque auctor scelerisque quam, in aliquet enim imperdiet vel. Nunc at dui varius, facilisis velit ac, accumsan arcu. Donec lacinia purus eu nulla mattis viverra. Maecenas sed tellus risus. Donec a vehicula augue.</em>
             </p>
           </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- <section id="logo">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-8 col-xs-12 text-center">
-          <img src="img/sc.png" class="img-fluid">
         </div>
       </div>
     </section>
-    <section id="intro">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-8 col-xs-12 text-center">
-          <p>Victoria Park | Brisbane</p>
-          <p>9th of September 2017</p>
+
+    <section class="rsvp">
+      <div class="container">
+        <div class="row">
+          <h2>R.S.V.P</h2>
+        </div>
+        <div class="row pin">
+          <p>Please enter the pin number located on the bottom of your invitation</p>
+          <form>
+            <div class="col-xs-12">
+              <input type="text" maxlength="1" class="pin-box" name="pin-1" />
+              <input type="text" maxlength="1" class="pin-box" name="pin-1" />
+              <input type="text" maxlength="1" class="pin-box" name="pin-1" />
+              <input type="text" maxlength="1" class="pin-box" name="pin-1" />
+            </div>
+            <div class="col-xs-12">
+              <input type="submit" class="btn-pin" value="Find">
+            </div>
+          </form>
+        </div>
+        <div class="row guests">
+          <form>
+            <div class="form-group row guest">
+              <div class="col-xs-12 col-md-3 col-md-offset-3 text-center">
+                <p>Chalana Hewage</p>
+                <input type="radio" name="chalana-attending" value="yes"> Attending
+                <input type="radio" name="chalana-attending" value="no"> Not Attending
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <textarea name="chalana-diet" placeholder="Please enter your dietery requirements"></textarea>
+              </div>
+            </div>
+            <div class="form-group row guest">
+              <div class="col-xs-12 col-md-3 col-md-offset-3 text-center">
+                <p>Chalana Hewage</p>
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Attending
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Not Attending
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <textarea name="name" placeholder="Please enter your dietery requirements"></textarea>
+              </div>
+            </div>
+            <div class="form-group row guest">
+              <div class="col-xs-12 col-md-3 col-md-offset-3 text-center">
+                <p>Chalana Hewage</p>
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Attending
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Not Attending
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <textarea name="name" placeholder="Please enter your dietery requirements"></textarea>
+              </div>
+            </div>
+            <div class="form-group row guest">
+              <div class="col-xs-12 col-md-3 col-md-offset-3 text-center">
+                <p>Chalana Hewage</p>
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Attending
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Not Attending
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <textarea name="name" placeholder="Please enter your dietery requirements"></textarea>
+              </div>
+            </div>
+            <input type="submit" class="btn-submit" value="Submit">
+          </form>
         </div>
       </div>
     </section>
-    <section id="counter">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-8 col-xs-12 text-center">
-          <p class="countdown"></p>
-        </div>
-      </div>
-    </section>
-    <section id="tuned">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-8 col-xs-12 text-center">
-          <p class="fadeIn">Stay tuned...</p>
-        </div>
-      </div>
-    </section>     -->
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

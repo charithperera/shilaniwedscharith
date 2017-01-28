@@ -1,4 +1,16 @@
 
+h2 {
+  margin-bottom: 30px;\
+  color: #051429;
+  font-weight: bold;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+section {
+  padding: 50px;
+  text-align: center;
+}
+
 .navbar {
   background-color: #051429;
   border-bottom: 1px solid white;
@@ -11,7 +23,7 @@
 }
 
 .navbar a:hover {
-  color: #AD9743 !important;
+  color: #e6bc33 !important;
 }
 
 .navbar-header .navbar-brand {
@@ -19,11 +31,11 @@
 }
 
 .navbar-header .navbar-brand img {
-  width: 100px;
+  max-width: 100px;
 }
 
 .header {
-  padding: 250px 0 200px 0;
+  padding: 400px 0 100px 0;
   background: url('../img/mainlow.jpg') no-repeat center 50px;
   background-size: cover;
   width: 100%;
@@ -56,25 +68,84 @@
   border-radius: 50%;
 }
 
-.story {
-  padding: 50px;
-  text-align: center;
-}
-
-.story h2 {
-  margin-bottom: 30px;
-}
-
 .story p {
   font-size: 1.5em;
 }
 
-h2 {
-  font-family: 'Cinzel Decorative', cursive;
+.rsvp {
+  background-color:  #051429;
+  color: #FFF;
+}
+
+.rsvp h2 {
+  text-align: center;
+  color: gold;
+  font-size: 4em;
+  letter-spacing: 0.5em;
+}
+
+.rsvp input[type='radio'] {
+  margin-left: 10px;
+}
+
+.rsvp textarea {
+  width: 100%;
+  border-radius: 5px;
+  color: #000;
+}
+
+.guest {
+  margin-bottom: 50px;
+}
+
+.pin {
+  margin-bottom: 50px;
+}
+
+.pin-box {
+  width: 40px;
+  margin: 0 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid white;
+  text-align: center;
+  font-size: 4em;
+}
+
+.pin-box:focus {
+    outline:none;
+}
+
+.rsvp input[type="submit"] {
+  background: none;
+  border: none;
+  font-size: 3em;
+  margin-top: 30px;
+}
+
+.rsvp input[type="submit"]:hover {
+  color: #e6bc33;
+}
+
+.guests {
+  display: block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
 }
 
 @media(max-width: 768px) {
+  section {
+    padding: 0;
+  }
+
   .header {
+    padding-top: 200px;
     padding-bottom: 50px;
   }
 
@@ -85,6 +156,23 @@ h2 {
   .story p {
     font-size: 1.2em;
     margin-top: 20px;
+  }
+
+  .guest {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  .rsvp textarea {
+    margin-top: 20px;
+    width: 300px;
+  }
+
+  .rsvp h2 {
+    font-size: 2em;
   }
 
 }
