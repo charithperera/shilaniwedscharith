@@ -59,10 +59,12 @@ $(document).ready(function() {
       }
       else {
         $invalidPin.fadeIn();
+        scrollToSection($invalidPin);
       }
     })
     .fail(function(err) {
       $serverError.fadeIn();
+      scrollToSection($serverError);
     })
   }
 
