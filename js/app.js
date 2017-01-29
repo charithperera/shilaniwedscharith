@@ -8,6 +8,7 @@ $(document).ready(function() {
   $formRsvp = $("#form-rsvp");
   $invalidPin = $(".invalid-pin");
   $rsvpSuccess = $(".rsvp-success");
+  $serverError = $(".server-error");
 
   $logo.mouseover(function() { $(this).attr("src", 'img/scgold.png'); })
   $logo.mouseout(function() { $(this).attr("src", 'img/sc.png');})
@@ -35,6 +36,7 @@ $(document).ready(function() {
     $guests.fadeOut();
     $invalidPin.fadeOut();
     $rsvpSuccess.fadeOut();
+    $serverError.fadeOut();
 
     $.ajax({
       url: 'http://localhost:3000/getinvitation',
@@ -60,7 +62,7 @@ $(document).ready(function() {
       }
     })
     .fail(function(err) {
-
+      $serverError.fadeIn();
     })
   }
 

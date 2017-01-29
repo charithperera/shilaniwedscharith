@@ -131,7 +131,7 @@ section {
   display: none;
 }
 
-.invalid-pin {
+.invalid-pin, .server-error {
   display: none;
   color: red;
 }
