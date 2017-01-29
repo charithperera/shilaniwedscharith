@@ -89,13 +89,14 @@ section {
 }
 
 .rsvp textarea {
-  width: 100%;
+  width: 500px;
   border-radius: 5px;
   color: #000;
+  margin-top: 10px;
 }
 
 .guest {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .pin {
@@ -116,17 +117,6 @@ section {
     outline:none;
 }
 
-.pin-num-2 {
-  width: 200px;
-  margin: 0 20px;
-  background: none;
-  border: none;
-  border-bottom: 3px solid white;
-  text-align: center;
-  font-size: 4em;
-  letter-spacing: 10px;
-}
-
 .rsvp input[type="submit"] {
   background: none;
   border: none;
@@ -139,7 +129,7 @@ section {
 }
 
 .guests {
-  display: block;
+  display: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
