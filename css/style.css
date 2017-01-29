@@ -95,14 +95,6 @@ section {
   margin-top: 10px;
 }
 
-.guest {
-  margin-bottom: 30px;
-}
-
-.pin {
-  margin-bottom: 50px;
-}
-
 .pin-box {
   width: 40px;
   margin: 0 20px;
@@ -114,14 +106,21 @@ section {
 }
 
 .pin-box:focus {
-    outline:none;
+  outline:none;
+}
+
+.btn-pin {
+  margin-top: 20px;
+}
+
+.btn-pin:focus {
+  outline:none;
 }
 
 .rsvp input[type="submit"] {
   background: none;
   border: none;
   font-size: 3em;
-  margin-top: 30px;
 }
 
 .rsvp input[type="submit"]:hover {
@@ -129,6 +128,15 @@ section {
 }
 
 .guests {
+  display: none;
+}
+
+.invalid-pin {
+  display: none;
+  color: red;
+}
+
+.rsvp-success {
   display: none;
 }
 
