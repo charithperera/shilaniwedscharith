@@ -145,7 +145,7 @@ section {
 }
 
 .bridal img {
-  padding: 0 30px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -166,9 +166,33 @@ section {
   cursor: pointer;
 }
 
-.info {
+.day {
   background-color:  #051429;
   color: #FFF;
+}
+
+.schedule {
+  padding-top: 60px;
+}
+
+.schedule div {
+  margin-bottom: 50px;
+}
+
+.schedule div h4 {
+  font-family: 'Parisienne', cursive;
+  font-size: 3em;
+  margin: 0;
+}
+
+.schedule div p {
+  margin: 0;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 1.2em;
+}
+
+.info-block {
+  margin-bottom: 40px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -225,7 +249,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
   .bridal img {
-    padding: 10px;
+    padding: 5px;
   }
 
   .bridal figcaption {
@@ -247,10 +271,6 @@ input[type=number]::-webkit-outer-spin-button {
 
   .modal-body blockquote {
     font-size: 1em;
-  }
-
-  .modal-body {
-
   }
 
 }
