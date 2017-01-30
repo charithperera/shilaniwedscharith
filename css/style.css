@@ -11,6 +11,11 @@ section {
   text-align: center;
 }
 
+.modal-body img {
+  padding: 0 30px;
+  margin: 10px auto;
+}
+
 .navbar {
   background-color: #051429;
   border-bottom: 1px solid white;
@@ -65,7 +70,6 @@ section {
 
 .spotlight {
   width: 300px;
-  border-radius: 50%;
 }
 
 .story p {
@@ -110,7 +114,7 @@ section {
 }
 
 .btn-pin {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .btn-pin:focus {
@@ -138,6 +142,33 @@ section {
 
 .rsvp-success {
   display: none;
+}
+
+.bridal img {
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.bridal figcaption {
+  margin: 10px 0 40px 0;
+}
+
+.bridal p {
+  margin-bottom: 40px;
+}
+
+.bridal figure {
+  transition: all .2s ease-in-out;
+}
+
+.bridal figure:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.info {
+  background-color:  #051429;
+  color: #FFF;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -191,6 +222,35 @@ input[type=number]::-webkit-outer-spin-button {
 
   .rsvp input[type="submit"] {
     font-size: 2em;
+  }
+
+  .bridal img {
+    padding: 10px;
+  }
+
+  .bridal figcaption {
+    margin-bottom: 20px;
+  }
+
+  .bridal p {
+    margin-bottom: 20px;
+  }
+
+  .bridal figcaption {
+    margin: 0;
+  }
+
+  .bridal h4 {
+    margin: 0 0 20px 0;
+    font-size: 1em;
+  }
+
+  .modal-body blockquote {
+    font-size: 1em;
+  }
+
+  .modal-body {
+
   }
 
 }

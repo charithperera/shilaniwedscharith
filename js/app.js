@@ -17,6 +17,11 @@ $(document).ready(function() {
   $formPin.submit(pinSubmission);
   $formRsvp.submit(submitRsvp);
 
+  $(".bridal figure").click(function() {
+    var personName = $(this).find("figcaption").text();
+    $('#modal' + personName +'').modal();
+  })
+
   function submitRsvp(e) {
     e.preventDefault();
     $.ajax({
@@ -55,16 +60,16 @@ $(document).ready(function() {
         var submitButton = '<input type="submit" class="btn-submit" value="Submit">'
         $formRsvp.append(submitButton);
         $guests.fadeIn();
-        scrollToSection($formRsvp);
+        scrollToSection($(".rsvp"));
       }
       else {
         $invalidPin.fadeIn();
-        scrollToSection($invalidPin);
+        scrollToSection($(".rsvp"));
       }
     })
     .fail(function(err) {
       $serverError.fadeIn();
-      scrollToSection($serverError);
+      scrollToSection($(".rsvp"));
     })
   }
 
@@ -100,6 +105,7 @@ $(document).ready(function() {
   function renderGuest(guest) {
     var guestsDiv = [
     '<div class="form-group row guest">',
+      '<input type="hidden" name="pin" value="' +  getPin() + '" />',
       '<div class="col-xs-12">',
         '<p>' + guest.first_name + ' ' + guest.last_name + '</p>',
       '</div>',
