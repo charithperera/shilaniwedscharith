@@ -1,14 +1,18 @@
 $(document).ready(function() {
 
-  $logo = $('.navbar-header .navbar-brand img');
-  $countdown = $(".countdown");
-  $pinBoxes = $('.pin-box');
-  $guests = $(".guests");
-  $formPin = $("#form-pin");
-  $formRsvp = $("#form-rsvp");
-  $invalidPin = $(".invalid-pin");
-  $rsvpSuccess = $(".rsvp-success");
-  $serverError = $(".server-error");
+  // openWeather API a1a4085162cabcaa54f5f85f642060c8
+  // http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=a1a4085162cabcaa54f5f85f642060c8
+
+  var $logo = $('.navbar-header .navbar-brand img');
+  var $countdown = $(".countdown");
+  var $pinBoxes = $('.pin-box');
+  var $guests = $(".guests");
+  var $formPin = $("#form-pin");
+  var $formRsvp = $("#form-rsvp");
+  var $invalidPin = $(".invalid-pin");
+  var $rsvpSuccess = $(".rsvp-success");
+  var $serverError = $(".server-error");
+  var $bridalSpotlight = $(".bridal figure");
 
   $logo.mouseover(function() { $(this).attr("src", 'img/scgold.png'); })
   $logo.mouseout(function() { $(this).attr("src", 'img/sc.png');})
@@ -16,14 +20,54 @@ $(document).ready(function() {
   $pinBoxes.keyup(movePinCursor);
   $formPin.submit(pinSubmission);
   $formRsvp.submit(submitRsvp);
+  $bridalSpotlight.click(showModal);
 
-  $(".bridal figure").click(function() {
+  getWeather();
+
+  function getWeather() {
+    $.ajax({
+      url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q={Brisbane},{AU}&cnt={7}&units=metric&APPID=a1a4085162cabcaa54f5f85f642060c8',
+      method: 'get'
+    })
+    .done(function(resp) {
+      var forecastData = buildWeatherData(resp.list);
+      renderWeather(forecastData);
+    });
+  }
+
+  function renderWeather(data) {
+    var nextSaturdayMoment = getNextSaturday();
+    var nextSaturdayWeather = data.filter(function(day) {
+      return day.date.day() == nextSaturdayMoment.day();
+    });
+    debugger;
+  }
+
+  function buildWeatherData(dataDays) {
+    var data = []
+    dataDays.forEach(function(day) {
+      var newDay = {
+        date: moment.unix(day.dt),
+        min: day.temp.min,
+        max: day.temp.max,
+        day: day.temp.day,
+        type: day.weather[0].main
+      }
+      data.push(newDay);
+    });
+
+    return data;
+  }
+
+  function showModal(e) {
     var personName = $(this).find("figcaption").text();
     $('#modal' + personName +'').modal();
-  })
+  }
+
 
   function submitRsvp(e) {
     e.preventDefault();
+    $serverError.fadeOut();
     $.ajax({
       url: 'http://localhost:3000/submitrsvp',
       method: 'post',
@@ -32,6 +76,10 @@ $(document).ready(function() {
     .done(function(resp) {
       $guests.fadeOut();
       $rsvpSuccess.fadeIn();
+    })
+    .fail(function(err) {
+      $serverError.fadeIn();
+      scrollToSection($(".rsvp"));
     })
   }
 
@@ -137,5 +185,14 @@ $(document).ready(function() {
 
   function scrollToSection(section) {
     $('html, body').animate({ scrollTop: section.offset().top }, 1000);
+  }
+
+  function getNextSaturday() {
+    var dayINeed = 6
+    if (moment().isoWeekday() <= dayINeed) {
+      return moment().isoWeekday(dayINeed);
+    } else {
+      return moment().add(1, 'weeks').isoWeekday(dayINeed);
+    }
   }
 })

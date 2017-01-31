@@ -117,7 +117,7 @@ section {
   margin: 20px 0;
 }
 
-.btn-pin:focus {
+.btn-pin:focus, .btn-submit:focus {
   outline:none;
 }
 
@@ -172,7 +172,7 @@ section {
 }
 
 .schedule {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 .schedule div {
