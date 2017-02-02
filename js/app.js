@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   // openWeather API a1a4085162cabcaa54f5f85f642060c8
   // http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=a1a4085162cabcaa54f5f85f642060c8
+  // 3077885031.1677ed0.f5034765750e41838a10f7e8047610cb
 
   var $logo = $('.navbar-header .navbar-brand img');
   var $countdown = $(".countdown");
@@ -13,6 +14,9 @@ $(document).ready(function() {
   var $rsvpSuccess = $(".rsvp-success");
   var $serverError = $(".server-error");
   var $bridalSpotlight = $(".bridal figure");
+  var $weather = $(".weather");
+  var $rsvp = $(".rsvp");
+  var $stay = $(".stay")
 
   $logo.mouseover(function() { $(this).attr("src", 'img/scgold.png'); })
   $logo.mouseout(function() { $(this).attr("src", 'img/sc.png');})
@@ -36,12 +40,94 @@ $(document).ready(function() {
   }
 
   function renderWeather(data) {
+    var nextFridayMoment = getNextFriday();
     var nextSaturdayMoment = getNextSaturday();
-    var nextSaturdayWeather = data.filter(function(day) {
-      return day.date.day() == nextSaturdayMoment.day();
+    var getNextSundayMoment = getNextSunday();
+
+    var weekendWeather = data.filter(function(day) {
+      return  day.date.day() == nextFridayMoment.day() ||
+              day.date.day() == nextSaturdayMoment.day() ||
+              day.date.day() == getNextSundayMoment.day();
     });
-    debugger;
+    renderFriday(weekendWeather[0]);
+    renderSaturday(weekendWeather[1]);
+    renderSunday(weekendWeather[2]);
   }
+
+  function renderSaturday(data) {
+    $(".weather-saturday h4").text(data.date.format('dddd Do of MMM'));
+    $('.weather-saturday i').addClass(getWeatherClass(data.type));
+    $(".weather-saturday .weather-description").text(data.description);
+    $(".weather-saturday .day-temp").text(data.day);
+    $(".weather-saturday .low-temp").text(data.min);
+    $(".weather-saturday .high-temp").text(data.max);
+  }
+
+  function renderFriday(data) {
+    $(".weather-friday h5").text(data.date.format('dddd Do of MMM'));
+    $(".weather-friday .weather-description").text(data.description);
+    $(".weather-friday .day-temp").text(data.day);
+    $(".weather-friday .low-temp").text(data.min);
+    $(".weather-friday .high-temp").text(data.max);
+  }
+
+  function renderSunday(data) {
+    $(".weather-sunday h5").text(data.date.format('dddd Do of MMM'));
+    $(".weather-sunday .weather-description").text(data.description);
+    $(".weather-sunday .day-temp").text(data.day);
+    $(".weather-sunday .low-temp").text(data.min);
+    $(".weather-sunday .high-temp").text(data.max);
+  }
+
+  function getWeatherClass(type) {
+    switch (type) {
+      case "Thunderstorm":
+        return "wi wi-thunderstorm"
+      case "Drizzle":
+        return "wi wi-sprinkle"
+      case "Rain":
+        return "wi wi-rain"
+      case "Snow":
+        return "wi wi-snow"
+      case "Atmosphere":
+        return "wi wi-fog"
+      case "Clear":
+        return "wi wi-day-sunny"
+      case "Clouds":
+        return "wi wi-cloudy"
+      case "Extreme":
+        return "wi wi-hail"
+      case "Additional":
+        return "wi wi-storm-warning"
+      default:
+        return "wi wi-na"
+    }
+  }
+
+  // function applyWeatherBackground(condition) {
+  //   switch (condition) {
+  //     case "Thunderstorm":
+  //       $stay.css("background-image": "url(img/weather/clear)")
+  //     case "Drizzle":
+  //       return "wi wi-sprinkle"
+  //     case "Rain":
+  //       return "wi wi-rain"
+  //     case "Snow":
+  //       return "wi wi-snow"
+  //     case "Atmosphere":
+  //       return "wi wi-fog"
+  //     case "Clear":
+  //       return "wi wi-day-sunny"
+  //     case "Clouds":
+  //       return "wi wi-cloudy"
+  //     case "Extreme":
+  //       return "wi wi-hail"
+  //     case "Additional":
+  //       return "wi wi-storm-warning"
+  //     default:
+  //       return "wi wi-na"
+  //   }
+  // }
 
   function buildWeatherData(dataDays) {
     var data = []
@@ -51,7 +137,8 @@ $(document).ready(function() {
         min: day.temp.min,
         max: day.temp.max,
         day: day.temp.day,
-        type: day.weather[0].main
+        type: day.weather[0].main,
+        description: day.weather[0].description
       }
       data.push(newDay);
     });
@@ -79,7 +166,7 @@ $(document).ready(function() {
     })
     .fail(function(err) {
       $serverError.fadeIn();
-      scrollToSection($(".rsvp"));
+      scrollToSection($rsvp);
     })
   }
 
@@ -108,16 +195,16 @@ $(document).ready(function() {
         var submitButton = '<input type="submit" class="btn-submit" value="Submit">'
         $formRsvp.append(submitButton);
         $guests.fadeIn();
-        scrollToSection($(".rsvp"));
+        scrollToSection($rsvp);
       }
       else {
         $invalidPin.fadeIn();
-        scrollToSection($(".rsvp"));
+        scrollToSection($rsvp);
       }
     })
     .fail(function(err) {
       $serverError.fadeIn();
-      scrollToSection($(".rsvp"));
+      scrollToSection($rsvp);
     })
   }
 
@@ -189,6 +276,24 @@ $(document).ready(function() {
 
   function getNextSaturday() {
     var dayINeed = 6
+    if (moment().isoWeekday() <= dayINeed) {
+      return moment().isoWeekday(dayINeed);
+    } else {
+      return moment().add(1, 'weeks').isoWeekday(dayINeed);
+    }
+  }
+
+  function getNextFriday() {
+    var dayINeed = 5
+    if (moment().isoWeekday() <= dayINeed) {
+      return moment().isoWeekday(dayINeed);
+    } else {
+      return moment().add(1, 'weeks').isoWeekday(dayINeed);
+    }
+  }
+
+  function getNextSunday() {
+    var dayINeed = 7
     if (moment().isoWeekday() <= dayINeed) {
       return moment().isoWeekday(dayINeed);
     } else {
