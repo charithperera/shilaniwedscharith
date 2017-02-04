@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-  // openWeather API a1a4085162cabcaa54f5f85f642060c8
-  // http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=a1a4085162cabcaa54f5f85f642060c8
-  // 3077885031.1677ed0.f5034765750e41838a10f7e8047610cb
-
   var $logo = $('.navbar-header .navbar-brand img');
   var $countdown = $(".countdown");
   var $pinBoxes = $('.pin-box');
@@ -26,7 +22,10 @@ $(document).ready(function() {
   $formRsvp.submit(submitRsvp);
   $bridalSpotlight.click(showModal);
 
+  var feed = getFeed();
+  feed.run();
   getWeather();
+  new WOW().init();
 
   function getWeather() {
     $.ajax({
@@ -39,19 +38,23 @@ $(document).ready(function() {
     });
   }
 
+
   function renderWeather(data) {
     var nextFridayMoment = getNextFriday();
     var nextSaturdayMoment = getNextSaturday();
     var getNextSundayMoment = getNextSunday();
 
-    var weekendWeather = data.filter(function(day) {
-      return  day.date.day() == nextFridayMoment.day() ||
-              day.date.day() == nextSaturdayMoment.day() ||
-              day.date.day() == getNextSundayMoment.day();
+    data.forEach(function(day) {
+      if (day.date.day() == nextFridayMoment.day()) {
+        renderFriday(day);
+      }
+      else if (day.date.day() == nextSaturdayMoment.day()) {
+          renderSaturday(day);
+      }
+      else if (day.date.day() == getNextSundayMoment.day()) {
+        renderSunday(day);
+      }
     });
-    renderFriday(weekendWeather[0]);
-    renderSaturday(weekendWeather[1]);
-    renderSunday(weekendWeather[2]);
   }
 
   function renderSaturday(data) {
@@ -103,31 +106,6 @@ $(document).ready(function() {
         return "wi wi-na"
     }
   }
-
-  // function applyWeatherBackground(condition) {
-  //   switch (condition) {
-  //     case "Thunderstorm":
-  //       $stay.css("background-image": "url(img/weather/clear)")
-  //     case "Drizzle":
-  //       return "wi wi-sprinkle"
-  //     case "Rain":
-  //       return "wi wi-rain"
-  //     case "Snow":
-  //       return "wi wi-snow"
-  //     case "Atmosphere":
-  //       return "wi wi-fog"
-  //     case "Clear":
-  //       return "wi wi-day-sunny"
-  //     case "Clouds":
-  //       return "wi wi-cloudy"
-  //     case "Extreme":
-  //       return "wi wi-hail"
-  //     case "Additional":
-  //       return "wi wi-storm-warning"
-  //     default:
-  //       return "wi wi-na"
-  //   }
-  // }
 
   function buildWeatherData(dataDays) {
     var data = []
@@ -190,6 +168,7 @@ $(document).ready(function() {
         var guests = resp.guests;
         guests.forEach(function(guest) {
           renderGuest(guest);
+          applyStyles();
           populateFields(guest);
         })
         var submitButton = '<input type="submit" class="btn-submit" value="Submit">'
@@ -242,25 +221,34 @@ $(document).ready(function() {
     '<div class="form-group row guest">',
       '<input type="hidden" name="pin" value="' +  getPin() + '" />',
       '<div class="col-xs-12">',
-        '<p>' + guest.first_name + ' ' + guest.last_name + '</p>',
+        '<h3>' + guest.name + '</h3>',
       '</div>',
       '<div class="col-xs-12">',
         '<label>',
-          '<input type="radio" name="' + guest.guest_id + '-attending" value="yes">',
+          '<input type="radio" name="' + guest.guest_id + '-attending" value="yes" required>',
           'Attending',
         '</label>',
         '<label>',
-          '<input type="radio" name="' + guest.guest_id + '-attending" value="no">',
+          '<input type="radio" name="' + guest.guest_id + '-attending" value="no" required>',
           'Not Attending',
         '</label>',
       '</div>',
       '<div class="col-xs-12">',
-        '<textarea name="' + guest.guest_id + '-diet" placeholder="Please enter your dietery requirements"></textarea>',
+        '<p>Dietery Requests</p>',
+        '<textarea maxlength="160" name="' + guest.guest_id + '-diet"></textarea>',
       '</div>',
     '</div>'
     ].join("\n");
     $formRsvp.append(guestsDiv);
   }
+
+  function applyStyles() {
+    $(".guest textarea").addClass("guest-textarea");
+    $(".guest textarea").addClass("no-focus");
+    $(".guest p").css("margin", "10px 0 0 0");
+  }
+
+
 
   function getDays() {
     var now = moment(); //todays date
@@ -300,4 +288,15 @@ $(document).ready(function() {
       return moment().add(1, 'weeks').isoWeekday(dayINeed);
     }
   }
+
+  function getFeed() {
+    return new Instafeed({
+        get: 'tagged',
+        tagName: 'shilaniwedscharith',
+        template: '<li class="list-group-item wow fadeIn"><a target="_blank" href="{{link}}"><img src="{{image}}" /></a></li>',
+        accessToken: '3077885031.ba4c844.9ac96e9e5e104be4ad14ebf31d2c0ca9',
+        sortBy: 'most-recent'
+    });
+  }
+
 })

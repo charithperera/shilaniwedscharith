@@ -7,7 +7,7 @@ h2 {
 }
 
 section {
-  padding: 50px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -40,28 +40,29 @@ section {
 }
 
 .header {
-  padding: 400px 0 100px 0;
+  padding: 300px 0 100px 0;
   background: url('../img/mainlow.jpg') no-repeat center 50px;
   background-size: cover;
   width: 100%;
   border-bottom: 2px solid #FFF;
   color: #FFF;
+  font-weight: bolder;
 }
 
 .header img {
-  width: 200px;
+  width: 300px;
   margin-bottom: 50px;
 }
 
 .header p {
   color: white;
-  font-size: 1em;
+  font-size: 2em;
   font-family: 'Cinzel Decorative', cursive;
 }
 
 .header .location {
   font-family: 'Parisienne', cursive;
-  font-size: 2em;
+  font-size: 4em;
 }
 
 .header .countdown {
@@ -78,25 +79,43 @@ section {
 
 .rsvp {
   background-color:  #051429;
+  background-image: url('../img/rsvp.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
   color: #FFF;
+  padding-bottom: 50px;;
 }
+
 
 .rsvp h2 {
   text-align: center;
   color: gold;
   font-size: 4em;
   letter-spacing: 0.5em;
+  margin-bottom: 50px;
 }
 
 .rsvp input[type='radio'] {
   margin-left: 10px;
 }
 
-.rsvp textarea {
-  width: 500px;
-  border-radius: 5px;
-  color: #000;
+.guest-textarea {
+  background: transparent;
+  resize: none;
+  border: 2px solid #FFF;
+  color: #FFF;
+  width: 70%;
   margin-top: 10px;
+  overflow:auto;
+  line-height: 1em;
+  height: 50px;
+  text-align: center;
+  padding: 7px;
+}
+
+.no-focus:focus {
+  outline:none;
 }
 
 .pin-box {
@@ -114,7 +133,7 @@ section {
 }
 
 .btn-pin {
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .btn-pin:focus, .btn-submit:focus {
@@ -166,13 +185,37 @@ section {
   cursor: pointer;
 }
 
+.brisbane {
+  background-image: url('../img/brisbane.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 300px 0;
+  text-align: center;
+}
+
+.brisbane h1 {
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 1em;
+  font-size: 6em;
+  font-weight: bolder;
+}
+
 .day {
   background-color:  #051429;
   color: #FFF;
 }
 
+.stay {
+  background-color:  #FFF;
+}
+
+.day a, .stay a {
+  margin-bottom: 30px;
+}
+
 .schedule {
-  margin-bottom: 20px;
+  margin: 50px 0 0 0;
 }
 
 .schedule div {
@@ -205,6 +248,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .weather {
   margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .weather p {
@@ -212,7 +256,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .weather-saturday {
-  margin: 10px 0 40px;
+  margin: 10px 0 20px;
   font-size: 2em;
 }
 
@@ -239,6 +283,70 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+.instagram {
+  background-image: url('../img/brisbane.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #FFF;
+}
+
+.instagram li {
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.instagram img {
+  border-radius: 10%;
+  transition: all .2s ease-in-out;
+}
+
+.instagram img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.instagram .hash {
+  color: #e6bc33;
+}
+
+a, a:visited, a:hover  {
+  text-decoration: none;
+  color: #FFF;
+}
+
+a:hover {
+  color: #e6bc33;
+}
+
+.footer {
+  background: #051429;
+  color: #FFF;
+  padding: 10px 0;
+}
+
+.footer i {
+  margin: 0 10px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+
+@media(max-width: 1366px) {
+  .brisbane h1 {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-header img {
+    width: 90px;
+  }
+
+}
+
 @media(max-width: 768px) {
   section {
     padding: 0;
@@ -262,13 +370,9 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 20px;
   }
 
+
   h2 {
     font-size: 1.6em;
-  }
-
-  .rsvp textarea {
-    margin-top: 20px;
-    width: 300px;
   }
 
   .rsvp h2 {
@@ -307,6 +411,75 @@ input[type=number]::-webkit-outer-spin-button {
 
   .modal-body blockquote {
     font-size: 1em;
+  }
+
+  .schedule {
+    margin: 0 0 20px;
+  }
+
+  .schedule div{
+    margin-bottom: 30px;
+  }
+
+  .schedule div:last-child{
+    margin-bottom: 20px;
+  }
+
+  .weather {
+    margin-bottom: 50px;
+  }
+
+  .weather h4 {
+    margin: 0;
+  }
+
+  .brisbane {
+    padding: 150px 10px;
+  }
+
+  .brisbane h1 {
+    font-size: 2em;
+  }
+
+  .rsvp h3 {
+    font-size: 1.5em;
+  }
+
+  .header img {
+    width: 200px;
+    margin-bottom: 50px;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+
+  .header .location {
+    font-size: 2em;
+  }
+
+  .header .countdown {
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .brisbane h1 {
+    font-size: 1.5em;
+  }
+
+  .instagram img {
+    width: 100px;
+  }
+
+  .rsvp h3 {
+    font-size: 1em;
+  }
+
+  .pin-box {
+    width: 30px;
+    font-size: 2em;
   }
 
 }
