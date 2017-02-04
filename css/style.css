@@ -7,7 +7,7 @@ h2 {
 }
 
 section {
-  padding: 10px;
+  padding: 50px 10px 50px 10px;
   text-align: center;
 }
 
@@ -37,6 +37,11 @@ section {
 
 .navbar-header .navbar-brand img {
   max-width: 100px;
+}
+
+.navbar-default .nav li.active a {
+  color: #e6bc33 !important;
+  background-color: #051429 !important;
 }
 
 .header {
@@ -103,13 +108,13 @@ section {
 .guest-textarea {
   background: transparent;
   resize: none;
-  border: 2px solid #FFF;
+  border: 1px solid #FFF;
   color: #FFF;
-  width: 70%;
+  width: 60%;
   margin-top: 10px;
   overflow:auto;
   line-height: 1em;
-  height: 50px;
+  height: 100px;
   text-align: center;
   padding: 7px;
 }
@@ -310,6 +315,10 @@ input[type=number]::-webkit-outer-spin-button {
   color: #e6bc33;
 }
 
+.instagram #instafeed {
+  margin-bottom: 300px;
+}
+
 a, a:visited, a:hover  {
   text-decoration: none;
   color: #FFF;
@@ -342,15 +351,21 @@ a:hover {
 
 @media (max-width: 991px) {
   .navbar-header img {
-    width: 90px;
+    width: 80px;
+    margin-top: 5px;
+  }
+
+  .nav a {
+    padding: 10px !important;
+  }
+
+  .navbar-collapse {
+    margin-top: 5px !important;
   }
 
 }
 
 @media(max-width: 768px) {
-  section {
-    padding: 0;
-  }
 
   .header {
     padding-top: 200px;
@@ -460,6 +475,10 @@ a:hover {
 
   .header .countdown {
     font-size: 1em;
+  }
+
+  .stay h2 {
+    margin-bottom: 0;
   }
 
 }

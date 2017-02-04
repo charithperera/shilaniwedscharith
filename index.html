@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Parisienne" rel="stylesheet">
 
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#myNavbar" data-offset="70">
     <!-- MODALS -->
 
     <div class="modal fade" id="modalAnthony" tabindex="-1" role="dialog" aria-labelledby="modalAnthonyLabel">
@@ -227,8 +227,9 @@
 
     <!-- END MODALS -->
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
   		<div class="container">
+        <div id="nav-anchor"></div>
   			<div class="navbar-header">
   				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
   				<span class="sr-only">Toggle navigation</span>
@@ -240,12 +241,12 @@
   			</div>
   			<div class="navbar-collapse collapse">
   				<ul class="nav navbar-nav navbar-right">
-  					<li><a href="#">Our Story</a></li>
-            <li><a href="#">RSVP</a></li>
-  					<li><a href="#">The Day</a></li>
-            <li><a href="#">Stay</a></li>
-            <li><a href="#">Bridal Party</a></li>
-            <li><a href="#">#ShilaniWedsCharith</a></li>
+  					<li><a href="#story" class="nav-story">Our Story</a></li>
+            <li><a href="#rsvp" class="nav-rsvp">RSVP</a></li>
+            <li><a href="#bridal" class="nav-bridal">Bridal Party</a></li>
+  					<li><a href="#day" class="nav-day">The Day</a></li>
+            <li><a href="#stay" class="nav-stay">The Stay</a></li>
+            <li><a href="#instagram" class="nav-instagram">#ShilaniWedsCharith</a></li>
   				</ul>
   			</div>
   		</div>
@@ -264,7 +265,7 @@
       </div>
     </section>
 
-    <section class="story">
+    <section class="story" id="story">
       <div class="container">
         <div class="row">
           <h2>Our Story</h2>
@@ -285,13 +286,13 @@
       </div>
     </section>
 
-    <section class="rsvp">
+    <section class="rsvp" id="rsvp">
       <div class="container">
         <div class="row">
           <h2>R.S.V.P</h2>
         </div>
         <div class="row pin">
-          <h3>Please enter the pin number located on the bottom of your invitation</h3>
+          <h3>Please enter the pin number located at the bottom of your invitation</h3>
           <form id="form-pin">
             <div class="col-xs-12">
               <input type="text" maxlength="1" class="pin-box" name="pin-1" />
@@ -311,18 +312,18 @@
           </form>
         </div>
         <div class="invalid-pin">
-          <p>Invalid PIN. Please try again or email shilani.charith@gmail.com to submit your RSVP.</p>
+          <p>Invalid PIN. Please try again or email shilani.charith@gmail.com to submit your RSVP</p>
         </div>
         <div class="server-error">
-          <p>OOOPS! Something went wrong. Please try again or email shilani.charith@gmail.com to submit your RSVP.</p>
+          <p>OOOPS! Something went wrong. Please try again or email shilani.charith@gmail.com to submit your RSVP</p>
         </div>
         <div class="rsvp-success">
-          <p>Thank you for your RSVP. It can be changed until the 29th of July.</p>
+          <p>Thank you for your RSVP. It can be changed until the 29th of July</p>
         </div>
       </div>
     </section>
 
-    <section class="bridal">
+    <section class="bridal" id="bridal">
       <div class="container">
         <div class="row">
           <h2>Bridal Party</h2>
@@ -415,7 +416,7 @@
         </div>
       </div>
     </section>
-    <section class="day">
+    <section class="day" id="day">
       <div class="container">
         <div class="row">
           <h2>The Day</h2>
@@ -469,7 +470,7 @@
         </div>
       </div>
     </section>
-    <section class="stay">
+    <section class="stay" id="stay">
       <div class="container">
         <div class="row">
           <h2>The stay</h2>
@@ -533,13 +534,13 @@
       </div>
     </section>
 
-    <section class="instagram">
+    <section class="instagram" id="instagram">
       <div class="container">
         <div class="row">
           <h2><a target="_blank" href="https://www.instagram.com/explore/tags/shilaniwedscharith/?hl=en"><span class="hash">#</span>ShilaniWedsCharith</a></h2>
         </div>
         <div class="row">
-          <ul class="list-group"id="instafeed">
+          <ul class="list-group" id="instafeed">
           </ul>
         </div>
       </div>
@@ -555,8 +556,7 @@
     </section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- <script type="text/javascript" src="js/instagram.js"></script> -->
     <script type="text/javascript" src="js/instafeed.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js">

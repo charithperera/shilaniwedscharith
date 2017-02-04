@@ -12,7 +12,12 @@ $(document).ready(function() {
   var $bridalSpotlight = $(".bridal figure");
   var $weather = $(".weather");
   var $rsvp = $(".rsvp");
-  var $stay = $(".stay")
+  var $stay = $(".stay");
+  var $story = $(".story");
+  var $bridal = $(".bridal");
+  var $day = $(".day");
+  var $stay = $(".stay");
+  var $instagram = $(".instagram");
 
   $logo.mouseover(function() { $(this).attr("src", 'img/scgold.png'); })
   $logo.mouseout(function() { $(this).attr("src", 'img/sc.png');})
@@ -22,10 +27,19 @@ $(document).ready(function() {
   $formRsvp.submit(submitRsvp);
   $bridalSpotlight.click(showModal);
 
+  $(".navbar-brand").on('click', function(e) { scrollToSection($(".header")) } );
+  $(".nav-story").on('click', function(e) { scrollToSection($story); });
+  $(".nav-rsvp").on('click', function(e) { scrollToSection($rsvp); });
+  $(".nav-bridal").on('click', function(e) { scrollToSection($bridal); });
+  $(".nav-day").on('click', function(e) { scrollToSection($day); });
+  $(".nav-stay").on('click', function(e) { scrollToSection($stay); });
+  $(".nav-instagram").on('click', function(e) { scrollToSection($instagram); });
+
   var feed = getFeed();
   feed.run();
   getWeather();
   new WOW().init();
+
 
   function getWeather() {
     $.ajax({
@@ -259,7 +273,7 @@ $(document).ready(function() {
   }
 
   function scrollToSection(section) {
-    $('html, body').animate({ scrollTop: section.offset().top }, 1000);
+    $('html, body').animate({ scrollTop: section.offset().top }, 500);
   }
 
   function getNextSaturday() {
