@@ -154,6 +154,7 @@ $(document).ready(function() {
     })
     .done(function(resp) {
       $guests.fadeOut();
+      scrollToSection($rsvp);
       $rsvpSuccess.fadeIn();
     })
     .fail(function(err) {
@@ -235,7 +236,7 @@ $(document).ready(function() {
     '<div class="form-group row guest">',
       '<input type="hidden" name="pin" value="' +  getPin() + '" />',
       '<div class="col-xs-12">',
-        '<h3>' + guest.name + '</h3>',
+        '<h4>' + guest.name + '</h4>',
       '</div>',
       '<div class="col-xs-12">',
         '<label>',

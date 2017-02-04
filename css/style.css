@@ -89,7 +89,12 @@ section {
   background-size: cover;
   background-position: center center;
   color: #FFF;
-  padding-bottom: 50px;;
+  padding-bottom: 50px;
+}
+
+.rsvp h3 {
+  font-family: 'Niconne', cursive;
+  font-size: 3em;
 }
 
 
@@ -102,7 +107,7 @@ section {
 }
 
 .rsvp input[type='radio'] {
-  margin-left: 10px;
+  margin-left: 10px; 
 }
 
 .guest-textarea {
@@ -114,9 +119,22 @@ section {
   margin-top: 10px;
   overflow:auto;
   line-height: 1em;
-  height: 100px;
+  height: 80px;
   text-align: center;
   padding: 7px;
+  font-size: 1.5em;
+  font-family: 'Niconne', cursive;
+}
+
+.guest p {
+  font-family: 'Niconne', cursive;
+  font-size: 1.5em;
+}
+
+.rsvp h4 {
+  font-family: 'Niconne', cursive;
+  color: #e6bc33;
+  font-size: 4em;
 }
 
 .no-focus:focus {
@@ -138,7 +156,12 @@ section {
 }
 
 .btn-pin {
-  margin-top: 20px;
+  margin: 20px 0 40px;
+  font-family: 'Niconne', cursive;
+}
+
+.btn-submit {
+  font-family: 'Niconne', cursive;
 }
 
 .btn-pin:focus, .btn-submit:focus {
