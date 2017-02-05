@@ -18,6 +18,7 @@ $(document).ready(function() {
   var $day = $(".day");
   var $stay = $(".stay");
   var $instagram = $(".instagram");
+  var $loading = $('.loading');
 
   $logo.mouseover(function() { $(this).attr("src", 'img/scgold.png'); })
   $logo.mouseout(function() { $(this).attr("src", 'img/sc.png');})
@@ -39,6 +40,14 @@ $(document).ready(function() {
   feed.run();
   getWeather();
   new WOW().init();
+
+  $(document)
+    .ajaxStart(function () {
+      $loading.show();
+    })
+    .ajaxStop(function () {
+      $loading.hide();
+    });
 
 
   function getWeather() {
@@ -148,7 +157,7 @@ $(document).ready(function() {
     e.preventDefault();
     $serverError.fadeOut();
     $.ajax({
-      url: 'http://localhost:3000/submitrsvp',
+      url: 'https://shilaniwedscharith.herokuapp.com/submitrsvp',
       method: 'post',
       data: $(this).serialize()
     })
@@ -172,7 +181,7 @@ $(document).ready(function() {
     $serverError.fadeOut();
 
     $.ajax({
-      url: 'http://localhost:3000/getinvitation',
+      url: 'https://shilaniwedscharith.herokuapp.com/getinvitation',
       method: 'get',
       data: {
         pin: getPin()
@@ -189,7 +198,7 @@ $(document).ready(function() {
         var submitButton = '<input type="submit" class="btn-submit" value="Submit">'
         $formRsvp.append(submitButton);
         $guests.fadeIn();
-        scrollToSection($rsvp);
+        scrollToSection($(".btn-pin"));
       }
       else {
         $invalidPin.fadeIn();
