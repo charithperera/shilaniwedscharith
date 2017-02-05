@@ -14,6 +14,7 @@ section {
 .modal-body img {
   padding: 0 30px;
   margin: 10px auto;
+  width: 400px;
 }
 
 .navbar {
@@ -79,7 +80,8 @@ section {
 }
 
 .story p {
-  font-size: 1.5em;
+  font-size: 1.7em;
+  font-family: 'Niconne', cursive;
 }
 
 .rsvp {
@@ -128,7 +130,7 @@ section {
 
 .guest p {
   font-family: 'Niconne', cursive;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 .rsvp h4 {
@@ -195,13 +197,18 @@ section {
   display: none;
 }
 
+.bridal p {
+  font-family: 'Niconne', cursive;
+  font-size: 1.7em;
+}
+
 .bridal img {
-  padding: 0 10px;
   margin: 0 auto;
 }
 
 .bridal figcaption {
   margin: 10px 0 40px 0;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
 .bridal p {
@@ -215,6 +222,11 @@ section {
 .bridal figure:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+
+.modal-body p {
+  font-family: 'Niconne', cursive;
+  font-size: 1.7em;
 }
 
 .brisbane {
@@ -404,14 +416,13 @@ a:hover {
   }
 
   .story p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-top: 20px;
   }
 
   .guest {
     margin-bottom: 20px;
   }
-
 
   h2 {
     font-size: 1.6em;
