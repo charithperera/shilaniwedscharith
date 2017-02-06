@@ -49,6 +49,7 @@ $(document).ready(function() {
       $loading.hide();
     });
 
+  $(".bg-reveal").delay(1500).slideUp(1000)
 
   function getWeather() {
     $.ajax({
