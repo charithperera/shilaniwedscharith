@@ -30,7 +30,11 @@ $(document).ready(function() {
 
   $(".navbar-brand").on('click', function(e) { scrollToSection($(".header")) } );
   $(".nav-story").on('click', function(e) { scrollToSection($story); });
-  $(".nav-rsvp").on('click', function(e) { scrollToSection($rsvp); });
+  $(".nav-rsvp").on('click', function(e) {
+    scrollToSection($rsvp);
+    $pinBoxes.first().focus();
+    $pinBoxes.first().select();
+  });
   $(".nav-bridal").on('click', function(e) { scrollToSection($bridal); });
   $(".nav-day").on('click', function(e) { scrollToSection($day); });
   $(".nav-stay").on('click', function(e) { scrollToSection($stay); });
@@ -221,11 +225,20 @@ $(document).ready(function() {
   }
 
   function movePinCursor(e) {
-    if ($(this).val() === "") {
+    key = e.which || e.keyCode || 0;
+
+    if (key === 37) {
       $(this).prev('.pin-box').focus();
+      $(this).prev('.pin-box').select();
     }
-    else {
+    else if (key === 39 || $(this).val() !== "") {
       $(this).next('.pin-box').focus();
+      $(this).next('.pin-box').select();
+    }
+    else if (key === 8) {
+      $(this).val("");
+      $(this).prev('.pin-box').focus();
+      $(this).prev('.pin-box').select();
     }
   }
 
