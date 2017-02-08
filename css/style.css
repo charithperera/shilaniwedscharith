@@ -1,294 +1,243 @@
-
 h2 {
-  margin-bottom: 30px;\
-  color: #051429;
-  font-weight: bold;
-  font-family: 'Cinzel Decorative', cursive;
+    margin-bottom: 30px;
+    \ color: #051429;
+    font-weight: bold;
+    font-family: 'Cinzel Decorative', cursive;
 }
-
 section {
-  padding: 50px 10px 50px 10px;
-  text-align: center;
+    padding: 50px 10px 50px 10px;
+    text-align: center;
 }
-
 .modal-body img {
-  padding: 0 30px;
-  margin: 10px auto;
-  width: 400px;
+    padding: 0 30px;
+    margin: 10px auto;
+    width: 400px;
 }
-
 .navbar {
-  background-color: #051429;
-  border-bottom: 1px solid white;
-  font-family: 'Cinzel Decorative', cursive;
-  font-weight: bold;
+    background-color: #051429;
+    border-bottom: 1px solid white;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
 }
-
 .navbar a {
-  color: #CCC !important;
+    color: #CCC !important;
 }
-
 .navbar a:hover {
-  color: #e6bc33 !important;
+    color: #e6bc33 !important;
 }
-
 .navbar-header .navbar-brand {
-  padding: 0;
+    padding: 0;
 }
-
 .navbar-header .navbar-brand img {
-  max-width: 100px;
+    max-width: 100px;
 }
-
 .navbar-default .nav li.active a {
-  color: #e6bc33 !important;
-  background-color: #051429 !important;
+    color: #e6bc33 !important;
+    background-color: transparent !important;
 }
-
 .header {
-  padding: 300px 0 100px 0;
-  background: url('../img/mainlow.jpg') no-repeat center 50px;
-  background-size: cover;
-  width: 100%;
-  border-bottom: 2px solid #FFF;
-  color: #FFF;
-  font-weight: bolder;
+    padding: 300px 0 100px 0;
+    background: url('../img/mainlow.jpg') no-repeat center 50px;
+    background-size: cover;
+    width: 100%;
+    color: #FFF;
+    font-weight: bolder;
+    background-attachment: fixed;
 }
-
 .header img {
-  width: 300px;
-  margin-bottom: 50px;
+    width: 300px;
+    margin-bottom: 50px;
 }
-
 .header p {
-  color: white;
-  font-size: 2em;
-  font-family: 'Cinzel Decorative', cursive;
+    color: white;
+    font-size: 2em;
+    font-family: 'Cinzel Decorative', cursive;
 }
-
 .header .location {
-  font-family: 'Parisienne', cursive;
-  font-size: 4em;
+    font-family: 'Parisienne', cursive;
+    font-size: 4em;
 }
-
 .header .countdown {
-  font-size: 3em;
+    font-size: 3em;
 }
-
 .spotlight {
-  width: 300px;
+    width: 300px;
 }
-
+.story {
+    border: 15px solid #051429;
+    background: #FFF;
+}
 .story p {
-  font-size: 1.7em;
-  font-family: 'Niconne', cursive;
+    font-size: 1.7em;
+    font-family: 'Niconne', cursive;
 }
-
 .rsvp {
-  background-color:  #051429;
-  background-image: url('../img/rsvp.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  color: #FFF;
-  padding-bottom: 50px;
-}
+    background-color: #051429;
+    /*background-image: url('../img/rsvp.jpg');*/
 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    color: #FFF;
+    padding-bottom: 50px;
+    border: 15px solid #FFF;
+}
 .rsvp h3 {
-  font-family: 'Niconne', cursive;
-  font-size: 3em;
+    font-family: 'Niconne', cursive;
+    font-size: 3em;
 }
-
-
 .rsvp h2 {
-  text-align: center;
-  color: gold;
-  font-size: 4em;
-  letter-spacing: 0.5em;
-  margin-bottom: 50px;
+    text-align: center;
+    color: gold;
+    font-size: 4em;
+    letter-spacing: 0.5em;
+    margin-bottom: 50px;
 }
-
 .rsvp input[type='radio'] {
-  margin-left: 10px;
+    margin-left: 10px;
 }
-
 .guest-textarea {
-  background: transparent;
-  resize: none;
-  border: 1px solid #FFF;
-  color: #FFF;
-  width: 60%;
-  margin-top: 10px;
-  overflow:auto;
-  line-height: 1em;
-  height: 80px;
-  text-align: center;
-  padding: 7px;
-  font-size: 1.5em;
-  font-family: 'Niconne', cursive;
+    background: transparent;
+    resize: none;
+    border: 1px solid #FFF;
+    color: #FFF;
+    width: 60%;
+    margin-top: 10px;
+    overflow: auto;
+    line-height: 1em;
+    height: 80px;
+    text-align: center;
+    padding: 7px;
+    font-size: 1.5em;
+    font-family: 'Niconne', cursive;
 }
-
 .guest p {
-  font-family: 'Niconne', cursive;
-  font-size: 1.7em;
+    font-family: 'Niconne', cursive;
+    font-size: 1.7em;
 }
-
 .rsvp h4 {
-  font-family: 'Niconne', cursive;
-  color: #e6bc33;
-  font-size: 4em;
+    font-family: 'Niconne', cursive;
+    color: #e6bc33;
+    font-size: 4em;
 }
-
 .no-focus:focus {
-  outline:none;
+    outline: none;
 }
-
 .pin-box {
-  width: 40px;
-  margin: 0 20px;
-  background: none;
-  border: none;
-  border-bottom: 3px solid white;
-  text-align: center;
-  font-size: 4em;
+    width: 40px;
+    margin: 0 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid white;
+    text-align: center;
+    font-size: 4em;
 }
-
 .pin-box:focus {
-  outline:none;
+    outline: none;
 }
-
 .btn-pin {
-  margin: 20px 0 40px;
-  font-family: 'Niconne', cursive;
+    margin: 20px 0 40px;
+    font-family: 'Niconne', cursive;
 }
-
 .btn-submit {
-  font-family: 'Niconne', cursive;
+    font-family: 'Niconne', cursive;
 }
-
-.btn-pin:focus, .btn-submit:focus {
-  outline:none;
+.btn-pin:focus,
+.btn-submit:focus {
+    outline: none;
 }
-
 .loading {
-  display: none;
+    display: none;
 }
-
 .rsvp input[type="submit"] {
-  background: none;
-  border: none;
-  font-size: 3em;
+    background: none;
+    border: none;
+    font-size: 3em;
 }
-
 .rsvp input[type="submit"]:hover {
-  color: #e6bc33;
+    color: #e6bc33;
 }
-
 .guests {
-  display: none;
+    display: none;
 }
-
-.invalid-pin, .server-error {
-  display: none;
-  color: red;
+.invalid-pin,
+.server-error {
+    display: none;
+    color: red;
 }
-
 .rsvp-success {
-  display: none;
+    display: none;
 }
-
+.bridal {
+    border: 15px solid #051429;
+    background: #FFF;
+}
 .bridal p {
-  font-family: 'Niconne', cursive;
-  font-size: 1.7em;
+    font-family: 'Niconne', cursive;
+    font-size: 1.7em;
 }
-
 .bridal img {
-  margin: 0 auto;
+    margin: 0 auto;
 }
-
 .bridal figcaption {
-  margin: 10px 0 40px 0;
-  font-family: 'Cinzel Decorative', cursive;
+    margin: 10px 0 40px 0;
+    font-family: 'Cinzel Decorative', cursive;
 }
-
 .bridal p {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
-
 .bridal figure {
-  transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
-
 .bridal figure:hover {
-  transform: scale(1.2);
-  cursor: pointer;
+    transform: scale(1.2);
+    cursor: pointer;
 }
-
 .modal-body p {
-  font-family: 'Niconne', cursive;
-  font-size: 1.7em;
+    font-family: 'Niconne', cursive;
+    font-size: 1.7em;
 }
-
-.brisbane {
-  background-image: url('../img/brisbane.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 300px 0;
-  text-align: center;
-}
-
 .brisbane h1 {
-  text-transform: uppercase;
-  color: #FFF;
-  letter-spacing: 1em;
-  font-size: 6em;
-  font-weight: bolder;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 1em;
+    font-size: 6em;
+    font-weight: bolder;
 }
-
 .day {
-  background-color:  #051429;
-  color: #FFF;
+    background-color: #051429;
+    color: #FFF;
+    border: 15px solid #FFF;
 }
-
 .stay {
-  background-color:  #FFF;
+    background-color: #FFF;
+    border: 15px solid #051429;
 }
-
-.day a, .stay a {
-  margin-bottom: 30px;
+.day a,
+.stay a {
+    margin-bottom: 30px;
 }
-
-.schedule {
-  /*margin: 50px 0 0 0;*/
-}
-
-
 .schedule img {
-  max-width: 150px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+    max-width: 150px;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
-
 .schedule div {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
-
 .schedule div h4 {
-  font-family: 'Parisienne', cursive;
-  font-size: 3em;
-  margin: 0;
+    font-family: 'Parisienne', cursive;
+    font-size: 3em;
+    margin: 0;
 }
-
 .schedule div p {
-  margin: 0;
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 1.2em;
+    margin: 0;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.2em;
 }
-
 .info-block {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -296,281 +245,234 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0;
 }
-
 .weather {
-  margin-bottom: 20px;
-  padding-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
 }
-
 .weather p {
-  margin: 0;
+    margin: 0;
 }
-
 .weather-saturday {
-  margin: 10px 0 70px;
-  font-size: 2em;
+    margin: 10px 0 70px;
+    font-size: 2em;
 }
-
 .weather-description {
-  text-transform:capitalize;
+    text-transform: capitalize;
 }
-
 .weather-saturday small {
-  font-size: 0.5em;
+    font-size: 0.5em;
 }
-
 .weather-day:last-child {
-  border-left: 1px dashed black;
+    border-left: 1px dashed black;
 }
-
 .weather i {
-  margin-bottom: 20px;
-  font-size: 30px;
+    margin-bottom: 20px;
+    font-size: 30px;
 }
-
 .weather-saturday i {
-  font-size: 80px;
-  padding-bottom: 10px;
+    font-size: 80px;
+    padding-bottom: 10px;
 }
-
-
 .instagram {
-  background-image: url('../img/brisbane.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  color: #FFF;
+    background-image: url('../img/brisbane.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #FFF;
 }
-
 .instagram li {
-  border: none;
-  display: inline-block;
-  background-color: transparent;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
 }
-
 .instagram img {
-  border-radius: 10%;
-  transition: all .2s ease-in-out;
+    border-radius: 10%;
+    transition: all .2s ease-in-out;
 }
-
 .instagram img:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+    transform: scale(1.1);
+    cursor: pointer;
 }
-
 .instagram .hash {
-  color: #e6bc33;
+    color: #e6bc33;
 }
-
 .instagram #instafeed {
-  margin-bottom: 300px;
+    margin-bottom: 300px;
 }
-
-a, a:visited, a:hover  {
-  text-decoration: none;
-  color: #FFF;
-}
-
+a,
+a:visited,
 a:hover {
-  color: #e6bc33;
+    text-decoration: none;
+    color: #FFF;
 }
-
+a:hover {
+    color: #e6bc33;
+}
 .footer {
-  background: #051429;
-  color: #FFF;
-  padding: 10px 0;
+    background: #051429;
+    color: #FFF;
+    padding: 10px 0;
 }
-
 .footer i {
-  margin: 0 10px;
+    margin: 0 10px;
 }
-
 .footer p {
-  margin: 0;
+    margin: 0;
 }
-
-
+.brisbane {
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px 0;
+    text-align: center;
+    background-image: url('../img/brisbane.jpg');
+}
 @media(max-width: 1366px) {
-  .brisbane h1 {
-    font-size: 5em;
-  }
-
-  .schedule img {
-    margin-bottom: 30px;
-  }
+    .brisbane h1 {
+        font-size: 5em;
+    }
+    .schedule img {
+        margin-bottom: 30px;
+    }
 }
-
 @media(max-width: 1024px) {
-  .schedule img {
-    margin-bottom: 50px;
-  }
-
-  .schedule div {
-    margin-bottom: 70px;
-  }
-
-  .weather-saturday  {
-    margin: 50px 0 80px;
-  }
-
+    .schedule img {
+        margin-bottom: 50px;
+    }
+    .schedule div {
+        margin-bottom: 70px;
+    }
+    .weather-saturday {
+        margin: 50px 0 80px;
+    }
 }
-
 @media (max-width: 991px) {
-  .navbar-header img {
-    width: 80px;
-    margin-top: 5px;
-  }
-
-  .nav a {
-    padding: 10px !important;
-  }
-
-  .navbar-collapse {
-    margin-top: 5px !important;
-  }
+    .navbar-header img {
+        width: 80px;
+        margin-top: 5px;
+    }
+    .nav a {
+        padding: 10px !important;
+    }
+    .navbar-collapse {
+        margin-top: 5px !important;
+    }
 }
-
 @media(max-width: 768px) {
-
-  .header {
-    padding-top: 200px;
-    padding-bottom: 50px;
-  }
-
-  .story {
-    padding: 0px;
-  }
-
-  .story p {
-    font-size: 1.5em;
-    margin-top: 20px;
-  }
-
-  .guest {
-    margin-bottom: 20px;
-  }
-
-  h2 {
-    font-size: 1.6em;
-  }
-
-  .rsvp h2 {
-    font-size: 2em;
-  }
-
-  .pin-box {
-    font-size: 2em;
-    margin: 0 5px;
-    width: 30px;
-  }
-
-  .rsvp input[type="submit"] {
-    font-size: 2em;
-  }
-
-  .bridal img {
-    padding: 5px;
-  }
-
-  .bridal figcaption {
-    margin-bottom: 20px;
-  }
-
-  .bridal p {
-    margin-bottom: 20px;
-  }
-
-  .bridal figcaption {
-    margin: 0;
-  }
-
-  .bridal h4 {
-    margin: 0 0 20px 0;
-    font-size: 1em;
-  }
-
-  .modal-body blockquote {
-    font-size: 1em;
-  }
-
-  .schedule {
-    margin: 0 0 20px;
-  }
-
-  .schedule div{
-    margin-bottom: 30px;
-  }
-
-  .schedule div:last-child{
-    margin-bottom: 20px;
-  }
-
-  .weather {
-    margin-bottom: 50px;
-  }
-
-  .weather h4 {
-    margin: 0;
-  }
-
-  .brisbane {
-    padding: 150px 10px;
-  }
-
-  .brisbane h1 {
-    font-size: 2em;
-  }
-
-  .rsvp h3 {
-    font-size: 1.5em;
-  }
-
-  .header img {
-    width: 200px;
-    margin-bottom: 50px;
-  }
-
-  .header p {
-    font-size: 1em;
-  }
-
-  .header .location {
-    font-size: 2em;
-  }
-
-  .header .countdown {
-    font-size: 1em;
-  }
-
-  .stay h2 {
-    margin-bottom: 0;
-  }
-
-  .schedule img {
-    margin-bottom: 20px;
-  }
-
-  .weather-saturday  {
-    margin: 0px 0 20px;
-  }
-
+    .header {
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+    .story {
+        padding: 0px;
+    }
+    .story p {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+    .guest {
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .rsvp h2 {
+        font-size: 2em;
+    }
+    .pin-box {
+        font-size: 2em;
+        margin: 0 5px;
+        width: 30px;
+    }
+    .rsvp input[type="submit"] {
+        font-size: 2em;
+    }
+    .bridal img {
+        padding: 5px;
+    }
+    .bridal figcaption {
+        margin-bottom: 20px;
+    }
+    .bridal p {
+        margin-bottom: 20px;
+    }
+    .bridal figcaption {
+        margin: 0;
+    }
+    .bridal h4 {
+        margin: 0 0 20px 0;
+        font-size: 1em;
+    }
+    .modal-body blockquote {
+        font-size: 1em;
+    }
+    .schedule {
+        margin: 0 0 20px;
+    }
+    .schedule div {
+        margin-bottom: 30px;
+    }
+    .schedule div:last-child {
+        margin-bottom: 20px;
+    }
+    .weather {
+        margin-bottom: 50px;
+    }
+    .weather h4 {
+        margin: 0;
+    }
+    .brisbane {
+        padding: 30px 0px;
+    }
+    .brisbane h1 {
+        font-size: 2em;
+    }
+    .rsvp h3 {
+        font-size: 1.5em;
+    }
+    .header img {
+        width: 200px;
+        margin-bottom: 50px;
+    }
+    .header p {
+        font-size: 1em;
+    }
+    .header .location {
+        font-size: 2em;
+    }
+    .header .countdown {
+        font-size: 1em;
+    }
+    .stay h2 {
+        margin-bottom: 0;
+    }
+    .schedule img {
+        margin-bottom: 20px;
+    }
+    .weather-saturday {
+        margin: 0px 0 20px;
+    }
 }
-
+@media (max-width: 450px) {
+    .story,
+    .stay,
+    .day,
+    .rsvp,
+    .bridal,
+    .header {
+        border-width: 5px;
+    }
+}
 @media (max-width: 320px) {
-  .brisbane h1 {
-    font-size: 1.5em;
-  }
-
-  .instagram img {
-    width: 100px;
-  }
-
-  .rsvp h3 {
-    font-size: 1em;
-  }
-
-  .pin-box {
-    width: 30px;
-    font-size: 2em;
-  }
-
+    .brisbane h1 {
+        font-size: 1.5em;
+    }
+    .instagram img {
+        width: 100px;
+    }
+    .rsvp h3 {
+        font-size: 1em;
+    }
+    .pin-box {
+        width: 30px;
+        font-size: 2em;
+    }
 }
