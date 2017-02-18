@@ -33,24 +33,24 @@ $(document).ready(function() {
     $bridalSpotlight.click(showModal);
 
     $(".navbar-brand").on('click', function(e) {
-        scrollToSection($(".header"), 100)
+        scrollToSection($(".header"), 0)
     });
     $(".nav-story").on('click', function(e) {
-        scrollToSection($story, 100);
+        scrollToSection($story, 0);
     });
     $(".nav-rsvp").on('click', function(e) {
-        scrollToSection($rsvp, 100);
+        scrollToSection($rsvp, 0);
         $pinBoxes.first().focus();
         $pinBoxes.first().select();
     });
     $(".nav-bridal").on('click', function(e) {
-        scrollToSection($bridal, 100);
+        scrollToSection($bridal, 0);
     });
     $(".nav-day").on('click', function(e) {
-        scrollToSection($day, 100);
+        scrollToSection($day, 0);
     });
     $(".nav-stay").on('click', function(e) {
-        scrollToSection($stay, 100);
+        scrollToSection($stay, 0);
     });
     $(".nav-instagram").on('click', function(e) {
         scrollToSection($instagram, 0);
@@ -182,12 +182,12 @@ $(document).ready(function() {
             })
             .done(function(resp) {
                 $guests.fadeOut();
-                scrollToSection($rsvp, 200);
+                scrollToSection($rsvp, 0);
                 $rsvpSuccess.fadeIn();
             })
             .fail(function(err) {
                 $serverError.fadeIn();
-                scrollToSection($rsvp, 200);
+                scrollToSection($rsvp, 0);
             })
     }
 
@@ -220,12 +220,12 @@ $(document).ready(function() {
                     scrollToSection($(".btn-pin"), 0);
                 } else {
                     $invalidPin.fadeIn();
-                    scrollToSection($rsvp);
+                    scrollToSection($rsvp, 0);
                 }
             })
             .fail(function(err) {
                 $serverError.fadeIn();
-                scrollToSection($rsvp);
+                scrollToSection($rsvp, 0);
             })
     }
 
@@ -309,7 +309,7 @@ $(document).ready(function() {
     function scrollToSection(section, off) {
         $('html, body').animate({
             scrollTop: section.offset().top - off
-        }, 500);
+        }, 1000);
     }
 
     function getNextSaturday() {

@@ -64,7 +64,6 @@ section {
     width: 300px;
 }
 .story {
-    border: 15px solid #051429;
     background: #FFF;
 }
 .story p {
@@ -73,14 +72,11 @@ section {
 }
 .rsvp {
     background-color: #051429;
-    /*background-image: url('../img/rsvp.jpg');*/
-
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     color: #FFF;
     padding-bottom: 50px;
-    border: 15px solid #FFF;
 }
 .rsvp h3 {
     font-family: 'Niconne', cursive;
@@ -169,7 +165,6 @@ section {
     display: none;
 }
 .bridal {
-    border: 15px solid #051429;
     background: #FFF;
 }
 .bridal p {
@@ -207,11 +202,9 @@ section {
 .day {
     background-color: #051429;
     color: #FFF;
-    border: 15px solid #FFF;
 }
 .stay {
     background-color: #FFF;
-    border: 15px solid #051429;
 }
 .day a,
 .stay a {
@@ -321,7 +314,7 @@ a:hover {
 .brisbane {
     background-size: cover;
     background-attachment: fixed;
-    padding: 30px 0;
+    padding: 350px 0;
     text-align: center;
     background-image: url('../img/brisbane.jpg');
 }
