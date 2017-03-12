@@ -320,7 +320,7 @@ a,
 a:visited,
 a:hover {
     text-decoration: none;
-    color: #FFF;
+    /*color: #FFF;*/
 }
 a:hover {
     color: #e6bc33;
