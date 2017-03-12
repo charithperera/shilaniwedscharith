@@ -292,9 +292,10 @@ input[type=number]::-webkit-outer-spin-button {
     padding-bottom: 10px;
 }
 .instagram {
-    background-image: url('../img/brisbane.jpg');
-    background-attachment: fixed;
-    background-size: cover;
+    /*background-image: url('../img/brisbane.jpg');*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+    background-color: #051429;
     color: #FFF;
 }
 .instagram li {
@@ -314,7 +315,7 @@ input[type=number]::-webkit-outer-spin-button {
     color: #e6bc33;
 }
 .instagram #instafeed {
-    margin-bottom: 300px;
+    /*margin-bottom: 300px;*/
 }
 a,
 a:visited,
@@ -330,15 +331,19 @@ a:hover {
     color: #e6bc33;
 }
 .footer {
-    background: #051429;
-    color: #FFF;
+    background: #FFF;
+    /*color: #FFF;*/
     padding: 10px 0;
+    font-weight: bold;
 }
 .footer i {
     margin: 0 10px;
 }
 .footer p {
     margin: 0;
+}
+.footer a:visited {
+  color: black;
 }
 .brisbane {
     padding: 350px 0;
@@ -386,9 +391,6 @@ a:hover {
     .header {
         padding-top: 200px;
         padding-bottom: 50px;
-    }
-    .story {
-        padding: 0px;
     }
     .story p {
         font-size: 1.5em;
@@ -489,13 +491,13 @@ a:hover {
     .header {
         border-width: 5px;
     }
+    .instagram img {
+        width: 100px;
+    }
 }
 @media (max-width: 320px) {
     .brisbane h1 {
         font-size: 1.5em;
-    }
-    .instagram img {
-        width: 100px;
     }
     .rsvp h3 {
         font-size: 1em;
