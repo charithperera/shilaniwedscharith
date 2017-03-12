@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
     var $logo = $('.navbar-header .navbar-brand img');
     var $countdown = $(".countdown");
     var $pinBoxes = $('.pin-box');
@@ -27,7 +29,7 @@ $(document).ready(function() {
         $(this).attr("src", 'img/sc.png');
     })
     $countdown.text(getDays() + " Days");
-    $pinBoxes.keyup(movePinCursor);
+    // $pinBoxes.keyup(movePinCursor);
     $formPin.submit(pinSubmission);
     $formRsvp.submit(submitRsvp);
     $bridalSpotlight.click(showModal);
@@ -230,28 +232,29 @@ $(document).ready(function() {
     }
 
     function getPin(e) {
-        var pin = '';
-        $pinBoxes.each(function() {
-            pin += ($(this).val());
-        })
-        return +pin;
+        // var pin = '';
+        // $pinBoxes.each(function() {
+        //     pin += ($(this).val());
+        // })
+        // return +pin;
+        return +$(".pin-full").val();
     }
 
-    function movePinCursor(e) {
-        key = e.which || e.keyCode || 0;
-
-        if (key === 37) {
-            $(this).prev('.pin-box').focus();
-            $(this).prev('.pin-box').select();
-        } else if (key === 39 || $(this).val() !== "") {
-            $(this).next('.pin-box').focus();
-            $(this).next('.pin-box').select();
-        } else if (key === 8) {
-            $(this).val("");
-            $(this).prev('.pin-box').focus();
-            $(this).prev('.pin-box').select();
-        }
-    }
+    // function movePinCursor(e) {
+    //     key = e.which || e.keyCode || 0;
+    //
+    //     if (key === 37) {
+    //         $(this).prev('.pin-box').focus();
+    //         $(this).prev('.pin-box').select();
+    //     } else if (key === 39 || $(this).val() !== "") {
+    //         $(this).next('.pin-box').focus();
+    //         $(this).next('.pin-box').select();
+    //     } else if (key === 8) {
+    //         $(this).val("");
+    //         $(this).prev('.pin-box').focus();
+    //         $(this).prev('.pin-box').select();
+    //     }
+    // }
 
     function populateFields(guest) {
         if (guest.attend === "yes") {
@@ -347,6 +350,10 @@ $(document).ready(function() {
             accessToken: '3077885031.ba4c844.9ac96e9e5e104be4ad14ebf31d2c0ca9',
             sortBy: 'most-recent'
         });
+    }
+
+    if (iOS) {
+      $(".navbar a").css("font-size", "0.8em");
     }
 
 })

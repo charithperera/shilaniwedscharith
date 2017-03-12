@@ -1,6 +1,8 @@
+
+
 h2 {
     margin-bottom: 30px;
-    \ color: #051429;
+    color: #051429;
     font-weight: bold;
     font-family: 'Cinzel Decorative', cursive;
 }
@@ -8,6 +10,12 @@ section {
     padding: 50px 10px 50px 10px;
     text-align: center;
 }
+
+input[type="text"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 .modal-body img {
     padding: 0 30px;
     margin: 10px auto;
@@ -18,6 +26,7 @@ section {
     border-bottom: 1px solid white;
     font-family: 'Cinzel Decorative', cursive;
     font-weight: bold;
+    text-align: center;
 }
 .navbar a {
     color: #CCC !important;
@@ -38,11 +47,11 @@ section {
 .header {
     padding: 300px 0 100px 0;
     background: url('../img/mainlow.jpg') no-repeat center 50px;
-    background-size: cover;
     width: 100%;
     color: #FFF;
     font-weight: bolder;
     background-attachment: fixed;
+    background-size: cover;
 }
 .header img {
     width: 300px;
@@ -72,8 +81,7 @@ section {
 }
 .rsvp {
     background-color: #051429;
-    background-attachment: fixed;
-    background-size: cover;
+    /*background-attachment: fixed;*/
     background-position: center center;
     color: #FFF;
     padding-bottom: 50px;
@@ -88,6 +96,9 @@ section {
     font-size: 4em;
     letter-spacing: 0.5em;
     margin-bottom: 50px;
+}
+.rsvp small {
+  display: none;
 }
 .rsvp input[type='radio'] {
     margin-left: 10px;
@@ -131,6 +142,16 @@ section {
 .pin-box:focus {
     outline: none;
 }
+.pin-full {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 0;
+  width: 12ch;
+  background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 2ch) 0 100%/ 11ch 2px no-repeat;
+  font: 5ch droid sans mono, consolas, monospace;
+  letter-spacing: 1ch;
+}
 .btn-pin {
     margin: 20px 0 40px;
     font-family: 'Niconne', cursive;
@@ -139,6 +160,7 @@ section {
     font-family: 'Niconne', cursive;
 }
 .btn-pin:focus,
+.pin-full,
 .btn-submit:focus {
     outline: none;
 }
@@ -202,6 +224,9 @@ section {
 .day {
     background-color: #051429;
     color: #FFF;
+}
+.day h2 {
+  color: white;
 }
 .stay {
     background-color: #FFF;
@@ -268,8 +293,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .instagram {
     background-image: url('../img/brisbane.jpg');
-    background-size: cover;
     background-attachment: fixed;
+    background-size: cover;
     color: #FFF;
 }
 .instagram li {
@@ -312,11 +337,11 @@ a:hover {
     margin: 0;
 }
 .brisbane {
-    background-size: cover;
-    background-attachment: fixed;
     padding: 350px 0;
     text-align: center;
     background-image: url('../img/brisbane.jpg');
+    background-attachment: fixed;
+    background-size: cover;
 }
 @media(max-width: 1366px) {
     .brisbane h1 {
@@ -336,6 +361,9 @@ a:hover {
     .weather-saturday {
         margin: 0px 0 80px;
     }
+    .header, .brisbane, .instagram {
+        background-attachment: scroll;
+    }
 }
 @media (max-width: 991px) {
     .navbar-header img {
@@ -344,6 +372,7 @@ a:hover {
     }
     .nav a {
         padding: 10px !important;
+        font-size: 1em;
     }
     .navbar-collapse {
         margin-top: 5px !important;

@@ -3,7 +3,9 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
     <title>Shilani Weds Charith</title>
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
@@ -277,14 +279,16 @@
         </div>
         <div class="row pin">
           <h3>Please enter the pin number located at the bottom of your invitation</h3>
+          <small>I see that you're using iOS device. Due to a few device incompatability issues, if you experience any issues try another device. Thanks!</small>
           <form id="form-pin" autocomplete="off">
             <div class="col-xs-12">
-              <input type="text" maxlength="1" class="pin-box" name="pin-1" />
+              <!-- <input type="text" maxlength="1" class="pin-box" name="pin-1" />
               <input type="text" maxlength="1" class="pin-box" name="pin-2" />
               <input type="text" maxlength="1" class="pin-box" name="pin-3" />
               <input type="text" maxlength="1" class="pin-box" name="pin-4" />
               <input type="text" maxlength="1" class="pin-box" name="pin-5" />
-              <input type="text" maxlength="1" class="pin-box" name="pin-6" />
+              <input type="text" maxlength="1" class="pin-box" name="pin-6" /> -->
+              <input type="text" maxlength="6" name="pin-full" class="pin-full">
             </div>
             <div class="col-xs-12">
               <input type="submit" class="btn-pin" value="Find">
