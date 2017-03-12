@@ -149,7 +149,7 @@ input[type="text"] {
   padding: 0;
   width: 12ch;
   background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 2ch) 0 100%/ 11ch 2px no-repeat;
-  font: 5ch droid sans mono, consolas, monospace;
+  font: 10ch droid sans mono, consolas, monospace;
   letter-spacing: 1ch;
 }
 .btn-pin {
@@ -404,6 +404,9 @@ a:hover {
         margin: 0 5px;
         width: 30px;
     }
+    .pin-full {
+      font-size: 6ch;
+    }
     .rsvp input[type="submit"] {
         font-size: 2em;
     }
@@ -496,5 +499,8 @@ a:hover {
     .pin-box {
         width: 30px;
         font-size: 2em;
+    }
+    .pin-full {
+      font-size: 4ch;
     }
 }
