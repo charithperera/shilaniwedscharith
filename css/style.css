@@ -322,6 +322,10 @@ a:hover {
     text-decoration: none;
     /*color: #FFF;*/
 }
+h2 a:visited {
+  text-decoration: none;
+  color: #FFF;
+}
 a:hover {
     color: #e6bc33;
 }
