@@ -12,6 +12,7 @@ $(document).ready(function() {
     var $rsvpSuccess = $(".rsvp-success");
     var $serverError = $(".server-error");
     var $bridalSpotlight = $(".bridal figure");
+    var $ourSpotlight = $("#story figure")
     var $weather = $(".weather");
     var $rsvp = $(".rsvp");
     var $stay = $(".stay");
@@ -33,6 +34,7 @@ $(document).ready(function() {
     $formPin.submit(pinSubmission);
     $formRsvp.submit(submitRsvp);
     $bridalSpotlight.click(showModal);
+    $ourSpotlight.click(showModal);
 
     $(".navbar-brand").on('click', function(e) {
         scrollToSection($(".header"), 0)

@@ -79,6 +79,10 @@ input[type="text"] {
     font-size: 1.7em;
     font-family: 'Niconne', cursive;
 }
+
+.story figcaption {
+  display: none;
+}
 .rsvp {
     background-color: #051429;
     /*background-attachment: fixed;*/
