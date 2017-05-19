@@ -74,15 +74,20 @@ input[type="text"] {
 }
 .story {
     background: #FFF;
+    font-family: 'Niconne', cursive;
 }
 .story p {
     font-size: 1.7em;
-    font-family: 'Niconne', cursive;
 }
 
 .story figcaption {
+  font-size: 1.5em;
+}
+
+.story small {
   display: none;
 }
+
 .rsvp {
     background-color: #051429;
     /*background-attachment: fixed;*/
@@ -210,10 +215,12 @@ input[type="text"] {
 .bridal p {
     margin-bottom: 40px;
 }
-.bridal figure {
+.bridal figure,
+.story figure {
     transition: all .2s ease-in-out;
 }
-.bridal figure:hover {
+.bridal figure:hover,
+.story figure:hover {
     transform: scale(1.2);
     cursor: pointer;
 }

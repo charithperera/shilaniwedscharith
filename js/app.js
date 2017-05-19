@@ -171,7 +171,8 @@ $(document).ready(function() {
     }
 
     function showModal(e) {
-        var personName = $(this).find("figcaption").text();
+        // var personName = $(this).find("figcaption").text();
+        var personName = $(this).find("figcaption").data("person");
         $('#modal' + personName + '').modal();
     }
 
