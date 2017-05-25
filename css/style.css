@@ -139,9 +139,9 @@ input[type="text"] {
 .no-focus:focus {
     outline: none;
 }
-.pin {
+/*.pin {
   display: none;
-}
+}*/
 .pin-box {
     width: 40px;
     margin: 0 20px;
