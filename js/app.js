@@ -195,7 +195,7 @@ $(document).ready(function() {
                         "from_email":"rsvp@shilaniwedscharith.com",
                         "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
                         "subject": "RSVP Received",
-                        "text": JSON.stringify(resp)
+                        "text": JSON.stringify($("#form-rsvp").serialize())
                     }
                 };
 
@@ -210,7 +210,7 @@ $(document).ready(function() {
                         "from_email":"rsvp@shilaniwedscharith.com",
                         "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
                         "subject": "RSVP Failed",
-                        "text": JSON.stringify(err)
+                        "text": JSON.stringify($("#form-rsvp").serialize())
                     }
                 };
 
