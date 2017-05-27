@@ -198,7 +198,7 @@ $(document).ready(function() {
                     "message": {
                         "from_email":"rsvp@shilaniwedscharith.com",
                         "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
-                        "subject": "RSVP Received",
+                        "subject": "RSVP Received - " + JSON.stringify(resp.guests),
                         "text": JSON.stringify(resp.guests)
                     }
                 };
