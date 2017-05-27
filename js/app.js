@@ -24,10 +24,6 @@ $(document).ready(function() {
     var $loading = $('.loading');
     var m = new mandrill.Mandrill('BsihkMxxpG87abr2SIcyUg');
 
-    function log(obj) {
-        $('#response').text(JSON.stringify(obj));
-    }
-
     $logo.mouseover(function() {
         $(this).attr("src", 'img/scgold.png');
     })
@@ -183,6 +179,18 @@ $(document).ready(function() {
 
     function submitRsvp(e) {
         e.preventDefault();
+
+        var params = {
+            "message": {
+                "from_email":"rsvp@shilaniwedscharith.com",
+                "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
+                "subject": "RSVP Received",
+                "text": JSON.stringify($(this).serialize())
+            }
+        };
+
+        sendTheMail(params)
+
         $serverError.fadeOut();
         $.ajax({
                 url: 'https://shilaniwedscharith.herokuapp.com/submitrsvp',
@@ -193,18 +201,6 @@ $(document).ready(function() {
                 $guests.fadeOut();
                 scrollToSection($rsvp, 0);
                 $rsvpSuccess.fadeIn();
-
-                var params = {
-                    "message": {
-                        "from_email":"rsvp@shilaniwedscharith.com",
-                        "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
-                        "subject": "RSVP Received - " + JSON.stringify(resp.guests),
-                        "text": JSON.stringify(resp.guests)
-                    }
-                };
-
-                sendTheMail(params)
-
             })
             .fail(function(err) {
                 $serverError.fadeIn();
@@ -384,10 +380,14 @@ $(document).ready(function() {
 
     function sendTheMail(params) {
         m.messages.send(params, function(res) {
-            log(res);
+            emailLog(res);
         }, function(err) {
-            log(err);
+            emailLog(err);
         });
+    }
+
+    function emailLog(obj) {
+        $('#response').text(JSON.stringify(obj));
     }
 
     if (iOS) {
