@@ -179,18 +179,6 @@ $(document).ready(function() {
 
     function submitRsvp(e) {
         e.preventDefault();
-
-        var params = {
-            "message": {
-                "from_email":"rsvp@shilaniwedscharith.com",
-                "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
-                "subject": "RSVP Received",
-                "text": JSON.stringify($(this).serialize())
-            }
-        };
-
-        sendTheMail(params)
-
         $serverError.fadeOut();
         $.ajax({
                 url: 'https://shilaniwedscharith.herokuapp.com/submitrsvp',
@@ -201,6 +189,17 @@ $(document).ready(function() {
                 $guests.fadeOut();
                 scrollToSection($rsvp, 0);
                 $rsvpSuccess.fadeIn();
+
+                var params = {
+                    "message": {
+                        "from_email":"rsvp@shilaniwedscharith.com",
+                        "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
+                        "subject": "RSVP Received",
+                        "text": JSON.stringify(resp)
+                    }
+                };
+
+                sendTheMail(params)
             })
             .fail(function(err) {
                 $serverError.fadeIn();
