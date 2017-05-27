@@ -22,6 +22,11 @@ $(document).ready(function() {
     var $stay = $(".stay");
     var $instagram = $(".instagram");
     var $loading = $('.loading');
+    var m = new mandrill.Mandrill('BsihkMxxpG87abr2SIcyUg');
+
+    function log(obj) {
+        $('#response').text(JSON.stringify(obj));
+    }
 
     $logo.mouseover(function() {
         $(this).attr("src", 'img/scgold.png');
@@ -171,7 +176,6 @@ $(document).ready(function() {
     }
 
     function showModal(e) {
-        // var personName = $(this).find("figcaption").text();
         var personName = $(this).find("figcaption").data("person");
         $('#modal' + personName + '').modal();
     }
@@ -189,10 +193,33 @@ $(document).ready(function() {
                 $guests.fadeOut();
                 scrollToSection($rsvp, 0);
                 $rsvpSuccess.fadeIn();
+
+                var params = {
+                    "message": {
+                        "from_email":"rsvp@shilaniwedscharith.com",
+                        "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
+                        "subject": "RSVP Received",
+                        "text": JSON.stringify(resp.guests)
+                    }
+                };
+
+                sendTheMail(params)
+
             })
             .fail(function(err) {
                 $serverError.fadeIn();
                 scrollToSection($rsvp, 0);
+
+                var params = {
+                    "message": {
+                        "from_email":"rsvp@shilaniwedscharith.com",
+                        "to":[{"email":"shilani.charith.rsvp@gmail.com"}],
+                        "subject": "RSVP Failed",
+                        "text": JSON.stringify(err)
+                    }
+                };
+
+                sendTheMail(params)
             })
     }
 
@@ -352,6 +379,14 @@ $(document).ready(function() {
             template: '<li class="list-group-item wow fadeIn"><a target="_blank" href="{{link}}"><img src="{{image}}" /></a></li>',
             accessToken: '3077885031.ba4c844.9ac96e9e5e104be4ad14ebf31d2c0ca9',
             sortBy: 'most-recent'
+        });
+    }
+
+    function sendTheMail(params) {
+        m.messages.send(params, function(res) {
+            log(res);
+        }, function(err) {
+            log(err);
         });
     }
 
